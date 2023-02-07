@@ -8629,6 +8629,37 @@ strong {
 
 }
 
+.dark-theme .table-sale  > tbody *:first-child >td:first-of-type {
+  background-color:transparent;
+  border-left-style: solid;
+  border-top-left-radius: 10px; 
+}
+.dark-theme  .table-sale  > tbody *:first-child >td:last-of-type {
+  background-color:transparent;
+  border-left-style: solid;
+  border-top-right-radius: 10px;
+}
+.dark-theme .table-sale > tbody *:last-child >td:last-of-type{
+  background-color:transparent;
+
+}
+.dark-theme .generate-btn{
+  background-color: #0c0a25;
+  /*  */
+  /* border:  1px solid ; */
+}
+.dark-theme .social-icon{
+  background-color: #110f24;
+  border: 1px solid white;
+}
+
+.dark-theme .social-icon:hover{
+  background-color: #0a0915;
+}
+
+.table-sale tbody tr td{
+  border: none;
+}
 
 .dark-theme .userSwitchActive{
   background-color: #131129;
@@ -8644,6 +8675,10 @@ strong {
 
 .dark-theme .canceled p{
   color: white;
+}
+
+.dark-theme .table-sale tbody {
+  background-color: #1D1933;
 }
 
 .title{
@@ -10218,6 +10253,8 @@ border: none !important;
 }
 .dropdowncurrency-container input{
   background-color: transparent;
+  border: none !important;
+  outline: none;
 }
 
 
@@ -10514,6 +10551,7 @@ input[type=number] {
   flex-direction: row;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
 }
 
 .social-icon{
@@ -10535,6 +10573,7 @@ input[type=number] {
   background-color: #00FFFF;
   /* border-radius: 10%; */
   padding: 17px;
+  border: none;
   border-radius: 50px;
   font-size: 1.1rem;
   cursor: pointer  !important;

@@ -12,6 +12,7 @@ import Layout from "../components/layout/Layout";
 import { useRef, useState,useEffect } from 'react';
 import { Spinner } from 'reactstrap';
 import { Tooltip } from 'reactstrap';
+import {OverlayTrigger} from 'react-bootstrap';
 
 
 
@@ -83,12 +84,16 @@ function GenerateLink() {
                                 <div className='social-title'> 
                                 Linkedin
                                 </div>
-
                             </div>
                         </div>
                         <div className='mt-5 w-auto'>                
-                            
-                            <button className={` ${isgenerate==='generate'  ? 'generate-btn' :'generate-link'} w-50`}  onClick={GenerateHandler}>{isgenerate==='generate' ?  'Generate Referral link!' : isgenerate==='loading' ? <Spinner animation="border"  variant="light" > <span className="visually-hidden">Loading...</span> </Spinner>: isgenerate==='reference-link' && <> <span value={'https://www.mintey.io?ref=243208w4cv9wjd3r4r38cT'} id='reference' ref={referenceLink} onMouseUp={texthandler} >https://www.mintey.io?ref=243208w4cv9wjd3r4r38cT</span> <span className='cp' onClick={copyHandler}   id='TooltipExample' data-tooltip-content={iscopied.length>0 ?  'Copied':'copy link'}>Copy</span></>  }</button>
+                             {/* <OverlayTrigger
+                                 placement="bottom"
+                                overlay={<Tooltip id="button-tooltip-2">Check out this avatar</Tooltip>}
+                                > */}
+                                {({ ref, ...triggerHandler }) => (
+                            <button className={` ${isgenerate==='generate'  ? 'generate-btn' :'generate-link'} w-50`}  onClick={GenerateHandler}>{isgenerate==='generate' ?  'Generate Referral link!' : isgenerate==='loading' ? <Spinner animation="border"  variant="light" > <span className="visually-hidden">Loading...</span> </Spinner>: isgenerate==='reference-link' && <> <span value={'https://www.mintey.io?ref=243208w4cv9wjd3r4r38cT'} id='reference' ref={referenceLink} onMouseUp={texthandler} >https://www.mintey.io?ref=243208w4cv9wjd3r4r38cT</span> <span className='cp' onClick={copyHandler}   id='TooltipExample' data-tooltip-content={iscopied.length>0 ?  'Copied':'copy link'}>Copy</span></>  }</button>)}
+                        {/* <OverlayTrigger/> */}
                         </div>
                         <p className='mt-4 paragraph-social' >
 
